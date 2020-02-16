@@ -1,0 +1,34 @@
+
+<div class="card-deck mx-auto">
+    {{#if movies}}
+    {{#each movies}}
+        {{#if this.poster_path}}
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/original{{this.poster_path}}" alt="{{this.title}}">
+            <div class="card-body">
+                <p class="card-text text-center">{{this.title}} ({{this.release_year}})</p>
+            </div>
+        </div>
+        {{else}}
+        <div class="card" style="width: 18rem;">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="65%" xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="xMidYMid meet" focusable="false" role="img" aria-label="Placeholder: {{this.title}}">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#868e96"></rect>
+            <text x="50%" y="50%" fill="#dee2e6" dy=".3em" dominant-baseline="middle" text-anchor="middle">{{this.title}} ({{this.release_year}})</text>
+            </svg>
+            <div class="card-body">
+                <p class="card-text text-center">{{this.title}} ({{this.release_year}})</p>
+            </div>
+        </div>
+        {{/if}}
+            
+    {{/each}}
+    {{else}}
+        <div class="card-body">
+            <h4 class="text-info text-center">No connections were found!</h4>
+            <secondary>(Works only between actors in movies for now. You won't find an actor-director connection or two actors in the same tv series connection yet)</secondary>
+        </div>
+      
+    {{/if}}
+</div>
+    

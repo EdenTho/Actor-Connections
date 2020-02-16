@@ -1,0 +1,111 @@
+.form-control{
+    height:50px; font-size:1.17em;
+    
+  }
+  .form-group {
+    position: relative;
+  }
+  
+  .show-ontop 
+  {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    box-shadow: 0 4px 6px 0 rgba(32,33,36,0.28);
+    width: 100%;
+    border-radius:0px 0px 10px 10px;
+  }
+  
+ .dropdown-item:hover{background-color: #e3e7ea !important;}
+
+  .margin-top
+  {
+    margin-top: 2em;
+  }
+
+  @media (min-width: 574px){
+    .col-sm-6 {
+      max-width: 50%;
+  }
+  .jumbotron{
+    overflow: auto;
+  }
+  
+  }
+
+  @media (min-width: 1000px){
+    .col-md-3 {
+      max-width: 25%;
+  }
+
+    
+  }
+
+  @media (min-height: 300px){
+    .container{
+        margin-bottom: 0%;
+    }
+    h1{
+        margin-bottom: 0.5%;
+    }
+    .between-inputs{
+        margin-bottom: 1%;
+    }
+    .before-button{
+        margin-bottom: 1.5%;
+    }
+    
+  }
+
+  @media (min-height: 700px){
+    .container{
+        margin-bottom: 1%;
+    }
+    h1{
+        margin-bottom: 4%;
+    }
+    .between-inputs{
+        margin-bottom: 2%;
+    }
+    .before-button{
+        margin-bottom: 2%;
+    }
+    
+  }
+
+  @media (min-height: 800px){
+    .container{
+        margin-bottom: 3%;
+    }
+    h1{
+        margin-bottom: 6%;
+    }
+    .between-inputs{
+        margin-bottom: 2%;
+    }
+    .before-button{
+        margin-bottom: 4%;
+    }
+    
+  }
+
+  @media (min-height: 1000px){
+    .container{
+        margin-bottom: 7%;
+    }
+    h1{
+        margin-bottom: 10%;
+    }
+    .between-inputs{
+        margin-bottom: 3%;
+    }
+    .before-button{
+        margin-bottom: 5%;
+    }
+    
+  }
+
+  .jumbotron{
+    height: 60vh;
+    
+}
