@@ -43,7 +43,6 @@ async function main(name, name2){
     let intersection = tmdb.getMoviesInCommon(moviesOfActor, moviesOfSecondActor);
     let movieListAsc = await tmdb.getMovieInfo(intersection);
     let movieListDesc = movieListAsc.reverse();
-    // console.log(movieListDesc.map(a => a.title));
     tmdb.addReleaseYear(movieListDesc);
     return movieListDesc;
 }

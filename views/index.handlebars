@@ -1,15 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
   
-
     <title>Actor Connections</title>
   </head>
     <body>
@@ -25,7 +21,6 @@
             <div class="form-group before-button">
               <input type="text" name="name2" id="search2" class="form-control" placeholder="Second Actor">
               <div id="possible-match2" class="possible-match show-ontop">
-                {{!-- <div class="dropdown-menu transparent"></div> --}}
               </div>
             </div>
             
@@ -37,12 +32,8 @@
         <h4 class="text-left" style="color:aliceblue; margin-left:5%;"> <small>{{urlTitle}} ({{urlYear}})</small> </h4>
       </div>
 
-      <ul class="list-group">
-       
-      </ul>    
-    <!-- Optional JavaScript -->
-     <script src="/api/autocomplete.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <ul class="list-group"></ul>    
+    <script src="/api/autocomplete.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
    
     <script>

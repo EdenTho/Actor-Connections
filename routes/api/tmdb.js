@@ -1,6 +1,6 @@
 const rp = require('request-promise');
+require('dotenv').config({path: '././app.env'});
 const APIKEY = process.env.APIKEY;
-
 async function getMovieListByActorName(name){
     const actorRes = await rp(`https://api.themoviedb.org/3/search/person?api_key=${APIKEY}&query=` + encodeURIComponent(name));
     let actorJson = JSON.parse(actorRes);
