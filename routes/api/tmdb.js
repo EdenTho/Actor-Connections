@@ -14,12 +14,11 @@ async function getMovieListByActorName(name){
     for(i = 0; i <= json.cast.length - 1; i++){
           movieIds.push(json.cast[i].id);
       }
-
     return movieIds;
 }
 
 function getMoviesInCommon(movieList, movieList2){
-return movieList.filter(element => movieList2.includes(element));
+    return movieList.filter(element => movieList2.includes(element));
 }
 
 function addReleaseYear(jsonArray){
@@ -30,19 +29,18 @@ function addReleaseYear(jsonArray){
 }
 
 async function getMovieInfo(movieIds){
-let movieDetailsArray = [];
-for(const movieId of movieIds){
-    let response = await rp(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${APIKEY}`);
-    response = JSON.parse(response);
-    movieDetailsArray.push(response);
-
-}
+    let movieDetailsArray = [];
+    for(const movieId of movieIds){
+        let response = await rp(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${APIKEY}`);
+        response = JSON.parse(response);
+        movieDetailsArray.push(response);
+    }
 
 //Do not recommend creating new Date objects inside the sort method. Have hit production performance issues specifically for that reason. Do not allocate memory (and GC) inside a sort method.
-movieDetailsArray.sort((a, b) => {
+    movieDetailsArray.sort((a, b) => {
     return new Date(a.release_date) - new Date(b.release_date); 
-})
-return movieDetailsArray;
+    })
+    return movieDetailsArray;
 }
 
 async function getRandomMovie(){
@@ -60,6 +58,6 @@ async function getRandomMovie(){
 
 function randomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min);
-  }
+}
 
 module.exports = {getMovieListByActorName, getMoviesInCommon, addReleaseYear, getMovieInfo, getRandomMovie};
